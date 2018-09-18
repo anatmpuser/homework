@@ -191,7 +191,7 @@ class SeleniumSearchProcessor {
 
     private static PrintWriter initiateResultWriter() {
         // TODO: consider to remove files from previous run
-        DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss").withZone(ZoneId.systemDefault());
+        DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss").withZone(ZoneId.systemDefault());
         String dateTimeStr = DATE_TIME_FORMATTER.format(Instant.now());
 
         String resultFileName = RESULT_FILE_PREFIX + dateTimeStr;
